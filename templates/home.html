@@ -1,0 +1,190 @@
+<html>a
+
+<head>
+    <title>California House Price</title>
+    <!-- <link rel="stylesheet" href="static\style.css"> -->
+    <style>
+        .navigation_bar {
+            background-color: #333333;
+            margin: -2% -1% 3% -1%;
+            border-color: black;
+            border-bottom-width: 1.5%;
+            border-style: solid;
+            color: white;
+            text-align: left;
+        }
+        
+        #Title_Navbar {
+            padding-left: 3%;
+            font-size: x-large;
+            font-family: sans-serif;
+        }
+        
+        body {
+            background-color: rgb(255, 241, 241);
+            text-align: center;
+        }
+        
+        .latitude_class {
+            background-color: rgb(245, 245, 187);
+            margin: 0% 0% 0.1% 0%;
+            padding: 2.5%;
+            font-family: Arial;
+            font-size: large;
+        }
+        
+        .longitude_class {
+            background-color: azure;
+            margin: 0% 0% 0.3% 0%;
+            padding: 2.5%;
+            font-family: Arial;
+            font-size: large
+        }
+        
+        .Housing_Median_Age_class {
+            background-color: rgb(217, 239, 239);
+            margin: 0% 0% 0.3% 0%;
+            padding: 2.5%;
+            font-family: Arial;
+            font-size: large
+        }
+        
+        .Total_Rooms_class {
+            background-color: rgb(224, 243, 213);
+            margin: 0% 0% 0.3% 0%;
+            padding: 2.5%;
+            font-family: Arial;
+            font-size: large
+        }
+        
+        .Population_class {
+            background-color: rgb(240, 243, 213);
+            margin: 0% 0% 0.3% 0%;
+            padding: 2.5%;
+            font-family: Arial;
+            font-size: large
+        }
+        
+        .Median_Income_class {
+            background-color: rgb(232, 219, 239);
+            margin: 0% 0% 0.01% 0%;
+            padding: 2.5%;
+            font-family: Arial;
+            font-size: large;
+        }
+        
+        .Ocean_Proximity_class {
+            background-color: rgb(218, 218, 249);
+            margin: 0% 0% 0.3% 0%;
+            padding: 2.5%;
+            font-family: Arial;
+            font-size: large;
+        }
+        
+        #ocean_proximity {
+            font-size: large;
+        }
+        
+        button {
+            font-size: x-large;
+            padding: 1%;
+            background-color: rgb(53, 52, 52);
+            border: white;
+            border-color: rgb(171, 171, 236);
+            border-width: 5%;
+            border-radius: 2%;
+            border-style: round;
+            font-family: Arial;
+            color: white;
+        }
+        
+        .prediction_text {
+            font-size: x-large;
+            color: black;
+            font-family: Verdana;
+        }
+        
+         ::placeholder {
+            font-family: 'Courier New', Courier, monospace;
+            opacity: 1;
+            text-align: center;
+        }
+        
+        #copyright {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navigation_bar">
+            <div class="text">
+                <h1 id="Title_Navbar"> California House Prices</h1>
+            </div>
+
+        </nav>
+    </header>
+    <main>
+        <form action="\prediction" method="post">
+            <!--Latitude-->
+            <div class="latitude_class">
+                <label for="latitude label"><b>Input the latitude</b></label>
+                <input type="text" name="latitudeid" required="required" placeholder="example: 37.88"> degrees
+            </div>
+            </div>
+            <br><br>
+            <!--Longitude-->
+            <div class="longitude_class">
+                <label for="longitude label"><b>Input the londitude</b></label>
+                <input type="text" name="longitude id" required="required" placeholder="example: -122.23"> degrees
+            </div>
+            <br><br>
+            <!--Housing_Median_Age-->
+            <div class="Housing_Median_Age_class">
+                <label for="housing median age label"><b>What is the median age of the houses there</b> ( <i> you can input the common age of houses there </i> )</label>
+                <input type="text" name="housing_median_age id" required="required" placeholder="4"> years</input>
+            </div>
+            <br><br>
+            <!--total_rooms-->
+            <div class="Total_Rooms_class">
+                <label for="total rooms label"><b>Approximate number of total rooms of all houses combined in the place</b></label>
+                <input type="text" name="total_rooms id" placeholder="2000"> rooms</input>
+            </div>
+            <br><br>
+            <!--population-->
+            <div class="Population_class">
+                <label for="population label"><b>Population in that area</b></label>
+                <input type="text" name="population id" placeholder="2000"></input>
+            </div>
+            <br><br>
+            <!--median_income-->
+            <div class="Median_Income_class">
+                <label for="Median_Income label"><b>Median income of people in that area</b></label>
+                <input type="text" name="median_income_id" placeholder="9.15"> dollars</input>
+            </div>
+            <br><br>
+            <!--Ocean Proximity-->
+            <div class="Ocean_Proximity_class">
+                <label for="OceanProximity label"><b>Select the ocean proxmity description of that area</b></label>
+                <select name="ocean_proximity" id="ocean_proximity" required="required">
+            <option value="NEAR_BAY">Near Bay</option>
+            <option value="NEAR_OCEAN">Near Ocean</option>
+            <option value="ISLAND">Island</option>
+            <option value="INLAND">Inland</option>
+            <option value="1H OCEAN">1H OCEAN</option>
+        </select></div>
+            <br><br>
+            <button type="submit" value="submit"> Submit </button>
+            <button type="reset" value="reset"> Reset </button>
+        </form>
+    </main>
+    <footer>
+        <div class="prediction_text">{{prediction_text}}</div>
+        <br><br><br><br>
+        <div id="Copyright">&#169;2022 Kartikey Bartwal
+        </div>
+    </footer>
+</body>
+
+</html>
