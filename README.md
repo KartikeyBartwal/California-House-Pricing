@@ -18,9 +18,16 @@ To run this application, you'll need to install the following dependencies:
 ## Installation
 
 1. Clone the repository:
-
-   ```bash
    git clone https://github.com/yourusername/yourrepository.git
    cd yourrepository
 
+2. Install the required packages:
    pip install -r requirements.txt
+
+## Usage
+
+To start the application, run:
+   python app.py
+
+Visit http://127.0.0.1:5000 in your web browser to access the application.
+
