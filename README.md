@@ -1,33 +1,39 @@
-# Online Ticketing Application
+# California House Pricing Prediction
 
 ## Overview
+This project aims to predict the median house prices in California based on various features, including the number of rooms, geographical location, and other relevant factors. It utilizes machine learning techniques to provide accurate predictions, helping potential buyers and investors make informed decisions.
 
-This repository contains an online ticketing application designed to manage issues such as hardware, software, and login access in large organizations. The application is built using Python and Flask, providing a simple interface for users to submit and track their tickets.
+## Project Structure
+.
+├── app.py # Main application file
+├── california_housing_model.pkl # Trained machine learning model
+└── templates
+└── home.html # HTML template for the web application
 
-- `app.py`: The main application file that runs the Flask server and handles ticket submissions and management.
-- `california_housing_model.pkl`: A pre-trained model file used for predicting housing prices based on California housing data.
-- `templates/home.html`: The HTML template for the home page, providing the user interface for the application.
+markdown
+Copy code
 
 ## Requirements
-
-To run this application, you'll need to install the following dependencies:
-
+- Python 3.x
 - Flask
-- Other necessary libraries (please refer to `requirements.txt` if provided)
+- scikit-learn
+- pandas
+- numpy
+- Jinja2
 
 ## Installation
-
 1. Clone the repository:
-   git clone https://github.com/yourusername/yourrepository.git
-   cd yourrepository
+   ```bash
+   git clone https://github.com/yourusername/California-House-Pricing.git
+   cd California-House-Pricing
+Install the required packages:
+bash
+Copy code
+pip install -r requirements.txt
+Usage
+Run the application:
 
-2. Install the required packages:
-   pip install -r requirements.txt
-
-## Usage
-
-To start the application, run:
-   python app.py
-
-Visit http://127.0.0.1:5000 in your web browser to access the application.
-
+bash
+Copy code
+python app.py
+Open your web browser and go to http://127.0.0.1:5000 to access the application.
