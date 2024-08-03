@@ -1,32 +1,26 @@
-# California House Pricing Prediction
+# California Housing Price Prediction
 
-## Overview
-This project aims to predict the median house prices in California based on various features, including the number of rooms, geographical location, and other relevant factors. It utilizes machine learning techniques to provide accurate predictions, helping potential buyers and investors make informed decisions.
+This project is a machine learning application aimed at predicting the median house prices in California based on various features such as the number of rooms, geographical location, and others. The application uses a trained machine learning model to provide accurate predictions.
 
 ## Project Structure
-.
-├── app.py # Main application file
-├── california_housing_model.pkl # Trained machine learning model
+
+```plaintext
+├── app.py
+├── california_housing_model.pkl
 └── templates
-└── home.html # HTML template for the web application
+    └── home.html
+app.py: The main application file that runs the web server and handles user requests.
+california_housing_model.pkl: The pre-trained machine learning model used for predicting house prices.
+templates/home.html: The HTML template for the home page of the application.
+Installation
+Clone the repository:
 
-markdown
+bash
 Copy code
-
-## Requirements
-- Python 3.x
-- Flask
-- scikit-learn
-- pandas
-- numpy
-- Jinja2
-
-## Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/California-House-Pricing.git
-   cd California-House-Pricing
+git clone <repository-url>
+cd <repository-name>
 Install the required packages:
+
 bash
 Copy code
 pip install -r requirements.txt
@@ -36,4 +30,9 @@ Run the application:
 bash
 Copy code
 python app.py
-Open your web browser and go to http://127.0.0.1:5000 to access the application.
+Open your web browser and navigate to http://localhost:5000 to access the application.
+
+Features
+Predicts median house prices based on user input for various features.
+User-friendly web interface for easy interaction.
+Utilizes a trained machine learning model for accurate predictions.
